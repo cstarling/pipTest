@@ -19,12 +19,12 @@ class install(_install):
             omniorbPYFileName = 'omniORBpy-4.2.1'
             activeVirtualEnvirnomentPath = sys.exec_prefix
 
-            omniORBTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/DCM_IIOP/omniORBdir/' + omniorbFileName)
+            omniORBTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/omniORBdir/' + omniorbFileName)
 
-            omniORBPYTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/DCM_IIOP/omniORBdir/' + omniorbPYFileName)
+            omniORBPYTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/omniORBdir/' + omniorbPYFileName)
             print "py tar" , omniORBPYTarPath
 
-            subprocess.call(['./DCM_IIOP/omniORBdir/omniORBAndomniORBPySetup.sh', activeVirtualEnvirnomentPath, omniorbFileName,
+            subprocess.call(['./omniORBdir/omniORBAndomniORBPySetup.sh', activeVirtualEnvirnomentPath, omniorbFileName,
                              omniorbPYFileName, omniORBTarPath, omniORBPYTarPath])
 
             print "it is not on path"
@@ -54,11 +54,10 @@ if __name__ == '__main__':
         url = '',
         scripts = [],
         packages = [
-            'DCM_IIOP',
-            'DCM_IIOP.DCM',
-            'DCM_IIOP.DCM__POA',
-            'DCM_IIOP._GlobalIDL',
-            'DCM_IIOP._GlobalIDL__POA',
+            'DCM',
+            'DCM__POA',
+            '_GlobalIDL',
+            '_GlobalIDL__POA',
         ],
         py_modules = [],
         classifiers = [

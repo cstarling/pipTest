@@ -1,1 +1,4 @@
-DCM_IIOP
+DCM
+DCM__POA
+_GlobalIDL
+_GlobalIDL__POA

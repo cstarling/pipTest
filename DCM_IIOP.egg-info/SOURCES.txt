@@ -1,13 +1,10 @@
 setup.py
-DCM_IIOP/DCM_Types_idl.py
-DCM_IIOP/DCM_idl.py
-DCM_IIOP/__init__.py
+DCM/__init__.py
 DCM_IIOP.egg-info/PKG-INFO
 DCM_IIOP.egg-info/SOURCES.txt
 DCM_IIOP.egg-info/dependency_links.txt
 DCM_IIOP.egg-info/top_level.txt
 DCM_IIOP.egg-info/zip-safe
-DCM_IIOP/DCM/__init__.py
-DCM_IIOP/DCM__POA/__init__.py
-DCM_IIOP/_GlobalIDL/__init__.py
-DCM_IIOP/_GlobalIDL__POA/__init__.py
+DCM__POA/__init__.py
+_GlobalIDL/__init__.py
+_GlobalIDL__POA/__init__.py
