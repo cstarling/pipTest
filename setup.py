@@ -7,7 +7,6 @@ import sys
 import os
 class install(_install):
     def pre_install_script(self):
-        print "in pre install"
         omniORBinPath = False
         for path in sys.path:
             if "omniORB" not in path:
@@ -53,9 +52,7 @@ if __name__ == '__main__':
         author_email = "",
         license = '',
         url = '',
-        #scripts = ['DCM_IIOP/DCM_idl.py',
-        #           'DCM_IIOP/DCM_Types_idl.py'
-       #            ],
+        scripts = [],
         packages = [
             'DCM_IIOP',
             'DCM_IIOP.DCM',
