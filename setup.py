@@ -2,10 +2,36 @@
 
 from setuptools import setup
 from setuptools.command.install import install as _install
-
+import subprocess
+import sys
+import os
 class install(_install):
     def pre_install_script(self):
-        pass
+        print "in pre install"
+        omniORBinPath = False
+        for path in sys.path:
+            if "omniORB" not in path:
+                continue
+            else:
+                omniORBinPath = True
+
+        if omniORBinPath == False:
+            omniorbFileName = 'omniORB-4.2.1'
+            omniorbPYFileName = 'omniORBpy-4.2.1'
+            activeVirtualEnvirnomentPath = sys.exec_prefix
+
+            omniORBTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/DCM_IIOP/omniORBdir/' + omniorbFileName)
+
+            omniORBPYTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/DCM_IIOP/omniORBdir/' + omniorbPYFileName)
+            print "py tar" , omniORBPYTarPath
+
+            subprocess.call(['./DCM_IIOP/omniORBdir/omniORBAndomniORBPySetup.sh', activeVirtualEnvirnomentPath, omniorbFileName,
+                             omniorbPYFileName, omniORBTarPath, omniORBPYTarPath])
+
+            print "it is not on path"
+        else:
+            print "it is on the path"
+
 
     def post_install_script(self):
         pass
