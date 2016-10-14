@@ -1,4 +1,6 @@
 DCM
+DCM_Types_idl
 DCM__POA
+DCM_idl
 _GlobalIDL
 _GlobalIDL__POA

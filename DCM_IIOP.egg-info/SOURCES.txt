@@ -1,3 +1,5 @@
+DCM_Types_idl.py
+DCM_idl.py
 setup.py
 DCM/__init__.py
 DCM_IIOP.egg-info/PKG-INFO

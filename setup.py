@@ -53,13 +53,13 @@ if __name__ == '__main__':
         license = '',
         url = '',
         scripts = [],
+        py_modules=['DCM_idl', 'DCM_Types_idl'],
         packages = [
             'DCM',
             'DCM__POA',
             '_GlobalIDL',
             '_GlobalIDL__POA',
         ],
-        py_modules = [],
         classifiers = [
             'Development Status :: 3 - Alpha',
             'Programming Language :: Python'
