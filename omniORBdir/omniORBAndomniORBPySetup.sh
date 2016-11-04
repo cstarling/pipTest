@@ -61,8 +61,10 @@ else
     cp omniORB_install/bin/genior bin/
 
 
-    touch lib/python2.7/site-packages/omniorb.pth
-    echo "$activeVirtualEnvirnomentPath/omniORB_install/lib/python2.7/site-packages" > lib/python2.7/site-packages/omniorb.pth
+    touch lib/python2.7/site-packages/omniorb_lib.pth
+    touch lib/python2.7/site-packages/omniorb_lib64.pth
+    echo "$activeVirtualEnvirnomentPath/omniORB_install/lib/python2.7/site-packages" > lib/python2.7/site-packages/omniorb_lib.pth
+    echo "$activeVirtualEnvirnomentPath/omniORB_install/lib64/python2.7/site-packages" > lib/python2.7/site-packages/omniorb_64.pth
 
 
 
