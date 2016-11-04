@@ -1,3 +1,7 @@
+#!/bin/bash
+
+numberOfargs=$#;
+
 if (($numberOfargs<1 )); then
     echo "wrong usage of script... ./omniORBAndomniORBPySetupExtrasForLinux.sh "
 else
