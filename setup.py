@@ -22,10 +22,15 @@ class install(_install):
             omniORBTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/omniORBdir/' + omniorbFileName)
 
             omniORBPYTarPath = (os.path.dirname(os.path.realpath(__file__)) + '/omniORBdir/' + omniorbPYFileName)
-            print "py tar" , omniORBPYTarPath
 
             subprocess.call(['./omniORBdir/omniORBAndomniORBPySetup.sh', activeVirtualEnvirnomentPath, omniorbFileName,
                              omniorbPYFileName, omniORBTarPath, omniORBPYTarPath])
+
+            if "linux" in sys.platform.lower():
+                print "linux is detected"
+                subprocess.call(
+                    ['./omniORBdir/omniORBAndomniORBPySetupExtrasForLinux.sh', activeVirtualEnvirnomentPath])
+
 
             print "it is not on path"
         else:
