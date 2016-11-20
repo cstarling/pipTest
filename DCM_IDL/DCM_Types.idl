@@ -17,8 +17,7 @@
  * @newpage
  * @endlatexonly 
  */
-  
- 
+
 /** @defgroup except General exceptions
  * MAX string length = 20
  * @warning For each IDL operation the last 4 exceptions must be mentioned.
@@ -42,45 +41,39 @@ enum eBoardType
 /** The types a board can be.
  * @version Release 6.9
  */
-
 enum eBoardType_V2
 {
-  BoardType_V2_GbE,            ///< It's a Gigabit Ethernet board.
-  BoardType_V2_ASI,            ///< It's an ASIboard.
-  BoardType_V2_IP_AdapterVideo,///< It's an IP Adapter Video board.
-  BoardType_V2_ASI_SFN,        ///< It's an ASI SFN board, supported from release V6.9.
-  BoardType_V2_TC,             ///< It's a Transcoder board.
-  BoardType_V2_GbE_GW,          ///< It's a Gigabit Ethernet board, used in IP Gateway.
-  BoardType_V2_ASI_GW,          ///< It's an ASIboard, used in IP Gateway.
-  BoardType_V2_9036_VSE_APP,    ///< It is the D9036 VSE application running as a virtual board
-  BoardType_V2_9036_MIO,        ///< It's an IO board in the D9036.
-  BoardType_V2_9036_MVI,       ///< It's a D9036 Video Input Card.
-  BoardType_V2_9036_MVC,       ///< It's a D9036 Video Codec Card.
-  BoardType_V2_9036_MVA,       ///< It's a D9036 Audio Codec Card.
-  BoardType_V2_DRD_VSB,        ///< It's a DRD 8VSB board.
-  BoardType_V2_MFP,            ///< It's an MFP board.
-  BoardType_V2_SFN_MKII,       ///< It's an SFN MkII board
-  BoardType_V2_DRD_DVBS2,      ///< It's a DRD DVB S2 board.
-  BoardType_V2_9036_PCA,       ///< It's a PCAM board.
-  BoardType_V2_IP_AdapterAudio,///< It's a DRD IP Adapter Audio board.
-  BoardType_V2_DGIO10_IN,      ///< It's a DGIO-10 input board, supported from release V13.0
-  BoardType_V2_DGIO10_OUT,     ///< It's a DGIO-10 output board, supported from release V13.0
-  ReservedBoardType_V2_21,     ///< Reserved for future use.
-  ReservedBoardType_V2_22,     ///< Reserved for future use.
-  ReservedBoardType_V2_23,     ///< Reserved for future use.
-  ReservedBoardType_V2_24,     ///< Reserved for future use.
-  ReservedBoardType_V2_25,     ///< Reserved for future use.
-  ReservedBoardType_V2_26,     ///< Reserved for future use.
-  ReservedBoardType_V2_27,     ///< Reserved for future use.
+  BoardType_V2_GbE,            ///<  0 It's a Gigabit Ethernet board.
+  BoardType_V2_ASI,            ///<  1 It's an ASIboard.
+  BoardType_V2_IP_AdapterVideo,///<  2 It's an IP Adapter Video board.
+  BoardType_V2_ASI_SFN,        ///<  3 It's an ASI SFN board, supported from release V6.9.
+  BoardType_V2_TC,             ///<  4 It's a Transcoder board.
+  BoardType_V2_GbE_GW,         ///<  5 It's a Gigabit Ethernet board, used in IP Gateway.
+  BoardType_V2_ASI_GW,         ///<  6 It's an ASIboard, used in IP Gateway.
+  BoardType_V2_9036_VSE_APP,   ///<  7 It is the D9036 VSE application running as a virtual board
+  BoardType_V2_9036_MIO,       ///<  8 It's an IO board in the D9036.
+  BoardType_V2_9036_MVI,       ///<  9 It's a D9036 Video Input Card.
+  BoardType_V2_9036_MVC,       ///< 10 It's a D9036 Video Codec Card.
+  BoardType_V2_9036_MVA,       ///< 11 It's a D9036 Audio Codec Card.
+  BoardType_V2_DRD_VSB,        ///< 12 It's a DRD 8VSB board.
+  BoardType_V2_MFP,            ///< 13 It's an MFP board.
+  BoardType_V2_SFN_MKII,       ///< 14 It's an SFN MkII board
+  BoardType_V2_DRD_DVBS2,      ///< 15 It's a DRD DVB S2 board.
+  BoardType_V2_9036_PCA,       ///< 16 It's a PCAM board.
+  BoardType_V2_IP_AdapterAudio,///< 17 It's a DRD IP Adapter Audio board.
+  BoardType_V2_DGIO10_IN,      ///< 18 It's a DGIO-10 input board, supported from release V13.0
+  BoardType_V2_DGIO10_OUT,     ///< 19 It's a DGIO-10 output board, supported from release V13.0
+  BoardType_V2_MFP2,           ///< 20 It's a MFP2 board
+  BoardType_V2_DGIO10_GbE,     ///< 21 It's a DGIO-10 hardware acting as a GbE board
+  BoardType_V2_DGIO10_SdiIn,   ///< 22 It's a DGIO-10 SDI input board, supported from release V15.10.
+  BoardType_V2_XGRESS,         ///< 23 It's a software node for IO. Only available on eDeviceType_SW.
+  BoardType_V2_XCODE,          ///< 24 It's a software node for processing. Only available on eDeviceType_SW.
+  BoardType_V2_DGIO10_Proc,    ///< 25 It's a DGIO hardware acting as coprocessor (used only in GetDgio10HwMode and Set10DgioHwMode)
+  BoardType_V2_VIRTUAL_MFP,    ///< 26 It's a Virtual MFP node.
   ReservedBoardType_V2_28,     ///< Reserved for future use.
   ReservedBoardType_V2_29,     ///< Reserved for future use.
   ReservedBoardType_V2_Unknown ///< Reserved for future use.
 };
-
-/// @}
-
-// PSIG
-//-------------------------------------------------------------------------------------
 
 /// PSIG type
 enum ePsigType
@@ -89,8 +82,12 @@ enum ePsigType
   CaVendorPsig                ///< external CA vendor PSIG
 };
 
+/// @}
+
+
 module DCM
 {
+interface BaseControl {};
 /** Triggered when the maximum number of clients is reached.
  * This can only happen at logon.
  */
@@ -155,4 +152,17 @@ exception OperationFailed { sequence<octet> Info; };
 
 };
 /// @} end of except
+
+/** @defgroup ABR general types
+ * @{
+ */
+
+/**
+ * the UUID is a 16 byte long universally unique identifier as defined in ITU-T Rec. X.667
+ */
+typedef octet Uuid_t[16];
+typedef sequence<Uuid_t> UuidList_t;
+
+/// @} end of ABR general types
+
 #endif
